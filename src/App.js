@@ -6,6 +6,13 @@ import Home from './Components/Home';
 import AboutView from './Components/AboutView';
 import SearchView from './Components/SearchView';
 import MovieView from './Components/MovieView';
+import Footer from './Components/Footer'
+import Features from './Components/Features'
+
+
+function NotFound404() {
+  return <h1>not NotFound404</h1>;
+}
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -27,16 +34,15 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={AboutView} />
+        <Route path="/features" component={Features}/>
         <Route path="/search" render={() => <SearchView keyword={searchText} searchResults={searchResults} />} />
         <Route path="/movies/:id" component={MovieView} />
-        <Route component={NotFound404} /> {/* Сторінка "Не знайдено 404" */}
+        <Route component={NotFound404} /> 
       </Switch>
+      <Footer />
     </div>
   );
 }
 
 export default App;
 
-function NotFound404() {
-  return <h1>not NotFound404</h1>;
-}

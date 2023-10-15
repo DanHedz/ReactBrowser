@@ -39,12 +39,12 @@ const Navbar = ({ searchText, setSearchText }) => {
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link disabled"
-                to="/"
+                className="nav-link "
+                to="/features"
                 tabIndex="-1"
                 aria-disabled="true"
               >
-                Coming soon
+                Features
               </Link>
             </li>
           </ul>
@@ -57,7 +57,7 @@ const Navbar = ({ searchText, setSearchText }) => {
               value={searchText}
               onChange={updateSearchText}
             />
-            <button className="btn btn-outline-success" type="submit">
+            <button className="btn btn-outline-success"  type="submit">
               Search
             </button>
           </form>
